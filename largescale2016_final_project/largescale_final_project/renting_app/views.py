@@ -10,7 +10,7 @@ from django.shortcuts import redirect
 from .routers import get_num_physical_shards
 from django.core.mail import EmailMessage
 
-from renting_pb2 import *
+from . import renting_pb2
 import grpc
 
 def set_query_hints(query, user_id):
@@ -246,7 +246,7 @@ def item(request, user_id, item_id):
 
   return render(request, 'renting_app/item.html', context)
 
-  @login_required
+@login_required
 def search(request):
   query = request.GET.get('query')
   #change channel to whatever the server is running on

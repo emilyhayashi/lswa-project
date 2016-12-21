@@ -12,7 +12,5 @@ DATABASES = {
   },
 }
 
-EMAIL_PASSWORD = 'largescale'
 
-# Database routers go here:
-# DATABASE_ROUTERS = ['renting_app.routers.UserRouter']
+
