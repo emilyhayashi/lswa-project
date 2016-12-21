@@ -33,10 +33,10 @@
                     <li><a href="/renting_app/home">Home</a></li>
                     {% if user_id %}
                     <li><a href="/renting_app/add-item">List an Item</a></li>
-                    <li><form id="searchform" action="/renting_app/search" method="get" accept-charset="utf=8">
+                    <li><form style="margin: 12px auto 12px 20px" id="searchform" action="/renting_app/search" method="get" accept-charset="utf=8">
                       <a><input type="search" name="query" placeholder="Search for item or user" value=""></a>
-                      <button type="submit">Search</button>
-                    </form></li> 
+                      <button type="button" class="btn btn-primary">Search</button>
+                    </form></li>
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@
                   <li><a href="/renting_app/register">Register</a></li>
                   <li><a href="/renting_app/login">Login</a></li>
                 {% endif %}
-                  
+
                 </ul>
                 }
             </div>
