@@ -169,6 +169,9 @@ def add(request):
     new_item.user_id = request.user.id
     new_item.currently_rented = False
     new_item.save()
+    channel = grpc.insecure_channel('localhost:35000')
+    stub = renting_pb2.WhooshSearchStub(channel)
+    completed = stub.Add(renting_pb2.AddRequest(id=new_item.id, item=new_item.name, description=new_item.description))
 
     return redirect('/renting_app/home/')
 
